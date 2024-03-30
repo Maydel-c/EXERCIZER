@@ -10,7 +10,7 @@ export const useLogin = () => {
         setIsLoading(true)
         setError(null)
         console.log('sending login req')
-        const response = await fetch('/api/user/login', {
+        const response = await fetch('https://exercizer-api.onrender.com/api/user/login', {
             method: 'POST',
             body: JSON.stringify({ email, password }),
             headers: {'Content-Type':'application/json'}
